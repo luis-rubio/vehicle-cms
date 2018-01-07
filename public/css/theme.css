@@ -1,0 +1,123 @@
+@media (min-width: 1200px) {
+  .container {
+    width: 900px !important;
+    }
+  }
+
+html, body {
+  height: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.logo-title {
+  font-size: 70px;
+}
+
+.full-height {
+  min-height: 100%;
+  height: 100%;
+  background: black;
+}
+.navbar-nav-admin > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+/* unvisited link */
+h3 a:link {
+    color: #000;
+}
+
+/* visited link */
+h3 a:visited {
+    color: #000;
+}
+
+/* mouse over link */
+h3 a:hover {
+    color: #f00;
+}
+
+/* selected link */
+h3 a:active {
+    color: #f00;
+}
+
+h3 {
+    padding: 0px;
+    margin: 0px;
+}
+/*#myCarousel {
+  width: 640px;
+  height: 427px;
+}*/
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel-inner {
+  border-radius: 3px;
+}
+
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+.jumbotron {
+  background-image: url('https://image.prntscr.com/image/ulDwnvFLTH6jtObxDZ9N2Q.png');
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  color: #fff;
+}
+
+#map {
+ height: 600px;
+ width: 100%;
+}
+
+.contact {
+  height: 500px;
+  padding-top: 10%;
+  font-size: 2rem;
+}
+
+.footer {
+  background: #282C2F;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 1.5rem;
+  color: #b5babc;
+}
