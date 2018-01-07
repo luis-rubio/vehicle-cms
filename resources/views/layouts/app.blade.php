@@ -21,6 +21,7 @@
 </head>
 <body>
     <div id="app">
+        @include('inc.adminbar')
         <center><h1 class="logo-title">2090 Auto</h1></center>
         @include('inc.navbar')
         <div class="container">
