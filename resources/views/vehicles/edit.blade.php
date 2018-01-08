@@ -14,7 +14,7 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     {{Form::label('year', 'Year')}}
-                    {{Form::text('year', $vehicle->year, ['class' => 'form-control', 'placeholder' => 'Year'])}}
+                    {{Form::number('year', $vehicle->year, ['class' => 'form-control', 'placeholder' => 'Year'])}}
                   </div>
                 </div>
                 <div class="col-md-4">
@@ -44,7 +44,7 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     {{Form::label('miles', 'Miles')}}
-                    {{Form::text('miles', $vehicle->miles, ['class' => 'form-control', 'placeholder' => 'Miles'])}}
+                    {{Form::number('miles', $vehicle->miles, ['class' => 'form-control', 'placeholder' => 'Miles'])}}
                   </div>
                 </div>
                 <div class="col-md-3">
@@ -56,7 +56,14 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     {{Form::label('drive', 'Drive Train')}}
-                    {{Form::text('drive', $vehicle->drive, ['class' => 'form-control', 'placeholder' => 'Drive'])}}
+                    <!-- {{Form::text('drive', $vehicle->drive, ['class' => 'form-control', 'placeholder' => 'Drive'])}} -->
+                    {{ Form::select('drive', [
+                                              $vehicle->drive => $vehicle->drive,
+                                              'FWD' => 'FWD',
+                                              'RWD' => 'RWD',
+                                              '4WD' => '4WD'
+                                            ], '',
+                                            ['class' => 'form-control']) }}
                   </div>
                 </div>
                 <div class="col-md-3">
@@ -71,19 +78,57 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     {{Form::label('transmission', 'Transmission')}}
-                    {{Form::text('transmission', $vehicle->transmission, ['class' => 'form-control', 'placeholder' => 'Transmission'])}}
+                    <!-- {{Form::text('transmission', $vehicle->transmission, ['class' => 'form-control', 'placeholder' => 'Transmission'])}} -->
+                    {{ Form::select('transmission', [
+                                                      $vehicle->transmission => $vehicle->transmission,
+                                                      'Automatic' => 'Automatic',
+                                                      'Manual' => 'Manual',
+                                                      'Other' => 'Other'
+                                                    ],
+                                                    '',
+                                                    ['class' => 'form-control']) }}
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     {{Form::label('exterior', 'Exterior Color')}}
-                    {{Form::text('exterior', $vehicle->exterior, ['class' => 'form-control', 'placeholder' => 'Exterior'])}}
+                    <!-- {{Form::text('exterior', $vehicle->exterior, ['class' => 'form-control', 'placeholder' => 'Exterior'])}} -->
+                    {{ Form::select('exterior', [
+                                                  $vehicle->exterior => $vehicle->exterior,
+                                                  'black' => 'black',
+                                                  'blue' => 'blue',
+                                                  'brown' => 'brown',
+                                                  'green' => 'green',
+                                                  'grey' => 'grey',
+                                                  'orange' => 'orange',
+                                                  'purple' => 'purple',
+                                                  'red' => 'red',
+                                                  'silver' => 'silver',
+                                                  'white' => 'white',
+                                                  'yellow' => 'yellow',
+                                                  'custom' => 'custom'
+                                                ], '', ['class' => 'form-control']) }}
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     {{Form::label('interior', 'Interior Color')}}
-                    {{Form::text('interior', $vehicle->interior, ['class' => 'form-control', 'placeholder' => 'Interior'])}}
+                    <!-- {{Form::text('interior', $vehicle->interior, ['class' => 'form-control', 'placeholder' => 'Interior'])}} -->
+                    {{ Form::select('interior', [
+                                                  $vehicle->exterior => $vehicle->exterior,
+                                                  'black' => 'black',
+                                                  'blue' => 'blue',
+                                                  'brown' => 'brown',
+                                                  'green' => 'green',
+                                                  'grey' => 'grey',
+                                                  'orange' => 'orange',
+                                                  'purple' => 'purple',
+                                                  'red' => 'red',
+                                                  'silver' => 'silver',
+                                                  'white' => 'white',
+                                                  'yellow' => 'yellow',
+                                                  'custom' => 'custom'
+                                                ], '', ['class' => 'form-control']) }}
                   </div>
                 </div>
               </div>
