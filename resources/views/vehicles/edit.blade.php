@@ -115,7 +115,7 @@
                     {{Form::label('interior', 'Interior Color')}}
                     <!-- {{Form::text('interior', $vehicle->interior, ['class' => 'form-control', 'placeholder' => 'Interior'])}} -->
                     {{ Form::select('interior', [
-                                                  $vehicle->exterior => $vehicle->exterior,
+                                                  $vehicle->interior => $vehicle->interior,
                                                   'black' => 'black',
                                                   'blue' => 'blue',
                                                   'brown' => 'brown',
