@@ -11,7 +11,7 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     {{Form::label('year', 'Year')}}
-                    {{Form::text('year', '', ['class' => 'form-control', 'placeholder' => 'Year'])}}
+                    {{Form::number('year', '', ['class' => 'form-control', 'placeholder' => 'Year'])}}
                   </div>
                 </div>
                 <div class="col-md-4">
@@ -41,7 +41,7 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     {{Form::label('miles', 'Miles')}}
-                    {{Form::text('miles', '', ['class' => 'form-control', 'placeholder' => 'Miles'])}}
+                    {{Form::number('miles', '', ['class' => 'form-control', 'placeholder' => 'Miles'])}}
                   </div>
                 </div>
                 <div class="col-md-3">
