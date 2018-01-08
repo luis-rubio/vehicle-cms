@@ -53,7 +53,8 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     {{Form::label('drive', 'Drive Train')}}
-                    {{Form::text('drive', '', ['class' => 'form-control', 'placeholder' => 'Drive'])}}
+                    <!-- {{Form::text('drive', '', ['class' => 'form-control', 'placeholder' => 'Drive'])}} -->
+                    {{ Form::select('drive', [ 'FWD', 'RWD', '4WD'], '', ['class' => 'form-control']) }}
                   </div>
                 </div>
                 <div class="col-md-3">
