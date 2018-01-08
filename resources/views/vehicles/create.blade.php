@@ -53,8 +53,12 @@
                 <div class="col-md-3">
                   <div class="form-group">
                     {{Form::label('drive', 'Drive Train')}}
-                    <!-- {{Form::text('drive', '', ['class' => 'form-control', 'placeholder' => 'Drive'])}} -->
-                    {{ Form::select('drive', [ 'FWD', 'RWD', '4WD'], '', ['class' => 'form-control']) }}
+                    {{ Form::select('drive', [
+                                              'FWD' => 'FWD',
+                                              'RWD' => 'RWD',
+                                              '4WD' => '4WD'
+                                            ], '',
+                                            ['class' => 'form-control']) }}
                   </div>
                 </div>
                 <div class="col-md-3">
@@ -69,19 +73,55 @@
                 <div class="col-md-4">
                   <div class="form-group">
                     {{Form::label('transmission', 'Transmission')}}
-                    {{Form::text('transmission', '', ['class' => 'form-control', 'placeholder' => 'Transmission'])}}
+                    <!-- {{Form::text('transmission', '', ['class' => 'form-control', 'placeholder' => 'Transmission'])}} -->
+                    {{ Form::select('transmission', [
+                                                      'Automatic' => 'Automatic',
+                                                      'Manual' => 'Manual',
+                                                      'Other' => 'Other'
+                                                    ],
+                                                    '',
+                                                    ['class' => 'form-control']) }}
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     {{Form::label('exterior', 'Exterior Color')}}
-                    {{Form::text('exterior', '', ['class' => 'form-control', 'placeholder' => 'Exterior'])}}
+                    <!-- {{Form::text('exterior', '', ['class' => 'form-control', 'placeholder' => 'Exterior'])}} -->
+                    {{ Form::select('exterior', [
+                                                  'black' => 'black',
+                                                  'blue' => 'blue',
+                                                  'brown' => 'brown',
+                                                  'green' => 'green',
+                                                  'grey' => 'grey',
+                                                  'orange' => 'orange',
+                                                  'purple' => 'purple',
+                                                  'red' => 'red',
+                                                  'silver' => 'silver',
+                                                  'white' => 'white',
+                                                  'yellow' => 'yellow',
+                                                  'custom' => 'custom'
+                                                ], '', ['class' => 'form-control']) }}
                   </div>
+
                 </div>
                 <div class="col-md-4">
                   <div class="form-group">
                     {{Form::label('interior', 'Interior Color')}}
-                    {{Form::text('interior', '', ['class' => 'form-control', 'placeholder' => 'Interior'])}}
+                    <!-- {{Form::text('interior', '', ['class' => 'form-control', 'placeholder' => 'Interior'])}} -->
+                    {{ Form::select('interior', [
+                                                  'black' => 'black',
+                                                  'blue' => 'blue',
+                                                  'brown' => 'brown',
+                                                  'green' => 'green',
+                                                  'grey' => 'grey',
+                                                  'orange' => 'orange',
+                                                  'purple' => 'purple',
+                                                  'red' => 'red',
+                                                  'silver' => 'silver',
+                                                  'white' => 'white',
+                                                  'yellow' => 'yellow',
+                                                  'custom' => 'custom'
+                                                ], '', ['class' => 'form-control']) }}
                   </div>
                 </div>
               </div>
