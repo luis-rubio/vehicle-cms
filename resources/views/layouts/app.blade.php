@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>2090 Autos</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 <body>
     <div id="app">
         @include('inc.adminbar')
-        <center><h1 class="logo-title">2090 Auto</h1></center>
+        <center><h1 class="logo-title"><a href="/">{{ config('app.name') }}</a></h1></center>
         @include('inc.navbar')
         <div class="container">
           @include('inc.messages')
@@ -38,13 +38,13 @@
         <div class="col-md-4">
           <div class="row">
             <div class="col-md-12">
-              <i class="fa fa-map-marker" aria-hidden="true"></i> 26364 FM 2090, Splendora, TX 77372
+              <i class="fa fa-map-marker" aria-hidden="true"></i> {{ config('app.company_location') }}
             </div>
             <div class="col-md-12">
-              <i class="fa fa-phone" aria-hidden="true"></i> 281.689.6141
+              <i class="fa fa-phone" aria-hidden="true"></i> {{ config('app.company_number') }}
             </div>
             <div class="col-md-12">
-              <i class="fa fa-envelope" aria-hidden="true"></i> contact@2090auto.com
+              <i class="fa fa-envelope" aria-hidden="true"></i> {{ config('app.company_email') }}
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@
             <b>About Us</b>
           </p>
           <p>
-            We are an autodealership location 30 miles north of Houston.
+            {{ config('app.company_about') }}
           </p>
         </div>
         <div class="col-md-4">
@@ -75,14 +75,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
         function initMap() {
-          var uluru = {lat: 30.233147, lng: -95.156077};
+          var location = {lat: 21.279856, lng: -157.8365683};
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 14,
-            center: uluru,
+            center: location,
             draggable: false
           });
           var marker = new google.maps.Marker({
-            position: uluru,
+            position: location,
             map: map
           });
         }

@@ -13,7 +13,24 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', '2090RD Autosales'),
+    'name' => 'Vehicle CMS',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Store Settings
+    |--------------------------------------------------------------------------
+    |
+    */
+    
+    'company_number' => '555.555.5555',
+
+    'company_email' => 'contact@mail.com',
+
+    'company_location' => 'Honolulu, Hawaii, USA',
+
+    'company_about' => 'You can change company settings in the config/app.php file.',
+
+    'company_banner' => 'https://image.prntscr.com/image/9DxYEnOWQmqB2s8CB8fP6Q.jpg',
 
     /*
     |--------------------------------------------------------------------------

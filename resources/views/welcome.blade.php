@@ -2,13 +2,13 @@
 
 @section('content')
 
-<div class="jumbotron text-center">
+<div class="jumbotron text-center" style="background-image: url('{{ config('app.company_banner') }}');">
   <h1>
-    2090 Auto
+    {{ config('app.name') }}
   </h1>
   <h2>
     <i class="fa fa-phone-square" aria-hidden="true"></i>
-    281-689-6141
+    {{ config('app.company_number') }}
   </h2>
   <p>
     <a class="btn btn-danger btn-lg" href="/vehicles">View Our Vehicles</a>
@@ -19,7 +19,7 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <h1 class="display-4">Our Location</h1>
-        <p>26364 FM 2090, Splendora, TX 77372</p>
+        <p>{{ config('app.company_location') }}</p>
         <div id="map"></div>
       </div>
     </div>
@@ -34,11 +34,11 @@
         <div class="contact">
           <p>
             <i class="fa fa-phone-square" aria-hidden="true"></i>
-            281.689.6141
+            {{ config('app.company_number') }}
           </p>
           <p>
             <i class="fa fa-envelope-o" aria-hidden="true"></i>
-            contact@2090auto.com
+            {{ config('app.company_email') }}
           </p>
         </div>
       </div>
