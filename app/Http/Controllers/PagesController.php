@@ -10,4 +10,13 @@ class PagesController extends Controller
       $title = '2090 Auto';
       return view('welcome')->with('title', $title);
     }
+
+    public function location(){
+      return view('location');
+    }
+
+    public function contact(){
+      return view('contact');
+    }
+
 }

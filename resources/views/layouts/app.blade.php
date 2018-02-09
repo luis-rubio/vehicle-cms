@@ -17,53 +17,21 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="icon" type="image/png" href="/storage/icon.png">
     <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
 
 </head>
 <body>
     <div id="app">
         @include('inc.adminbar')
-        <center><h1 class="logo-title"><a href="/">{{ config('app.name') }}</a></h1></center>
+
         @include('inc.navbar')
-        <div class="container">
+        <div class="container-fluid">
           @include('inc.messages')
           @yield('content')
         </div>
     </div>
 
-<!-- footer -->
-<div class="row footer">
-  <div class="col-md-12">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="row">
-            <div class="col-md-12">
-              <i class="fa fa-map-marker" aria-hidden="true"></i> {{ config('app.company_location') }}
-            </div>
-            <div class="col-md-12">
-              <i class="fa fa-phone" aria-hidden="true"></i> {{ config('app.company_number') }}
-            </div>
-            <div class="col-md-12">
-              <i class="fa fa-envelope" aria-hidden="true"></i> {{ config('app.company_email') }}
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <p>
-            <b>About Us</b>
-          </p>
-          <p>
-            {{ config('app.company_about') }}
-          </p>
-        </div>
-        <div class="col-md-4">
 
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- footer -->
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

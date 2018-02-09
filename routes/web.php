@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'PagesController@index');
+Route::get('/location', 'PagesController@location');
+Route::get('/contact', 'PagesController@contact');
 
 Route::resource('vehicles', 'VehiclesController');
 
