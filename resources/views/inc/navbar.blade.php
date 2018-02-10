@@ -27,7 +27,7 @@
           </a>
         </li>
         <!-- vehicles -->
-        <li class="active">
+        <li>
           <a href="/vehicles">
             <span class="hidden-xs"><i class="fa fa-car"></i><br></span>
             <span class="sidenav-name">Vehicles</span>
