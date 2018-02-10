@@ -7,8 +7,6 @@
   <h1>Our Vehicles</h1>
 </div>
 
-
-
   @if(count($vehicles) > 0)
     <div class="row">
 

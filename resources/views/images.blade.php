@@ -43,7 +43,6 @@
         <div class="panel-body">
           @if(count($photos) > 0)
             @foreach($photos as $photo)
-
             <div class="col-md-4">
               <div class="thumbnail">
                 <img src="/storage/vehicle_images/{{$photo->filename}}" style="width:100%">
@@ -70,14 +69,7 @@
           @else
             <p>No posts found</p>
           @endif
-
         </div>
-        </div>
-
+      </div>
     </div>
-
-
-
-
-
 @endsection
