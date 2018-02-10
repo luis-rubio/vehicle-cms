@@ -25,7 +25,7 @@
                         <th></th>
                         <th>            <span class="pull-right">
                                       <a href="/vehicles/create" class="btn btn-success">Add new</a>
-                                      <a href="#" class="btn btn-default">Log out</a>
+                                      <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-default">Logout</a>
                                     </span></th>
                       </tr>
                       @foreach($vehicles as $vehicle)

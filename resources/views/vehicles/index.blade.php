@@ -11,7 +11,7 @@
     <div class="row">
 
     @foreach($vehicles as $vehicle)
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="panel panel-default animated fadeInUp">
 
         @if(count($photos) > 0)
