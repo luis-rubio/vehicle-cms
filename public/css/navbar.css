@@ -1,7 +1,6 @@
 /* desktop sidebar nav vertical */
 @media (min-width: 768px) {
-  .container-fluid {
-    /* margin: -15px; */
+  .container-margin {
     margin-left: 60px;
   }
 

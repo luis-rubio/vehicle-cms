@@ -18,14 +18,93 @@
     <link rel="icon" type="image/png" href="/storage/icon.png">
     <link href="{{ asset('css/theme.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+
+
+    <style>
+      html, body {
+        height: 100%;
+        background-color: #f1f1f1;
+        color: #22313F;
+      }
+
+      .container-fluid {
+        padding: 0;
+        height: 100%;
+      }
+
+      .container-padding {
+        padding: 10px;
+      }
+
+      #app {
+        height: 100%;
+      }
+
+      #map {
+        height: 100%;
+      }
+      .pagination > li > a,
+.pagination > li > span {
+  color: #d14444;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #b73a3a;
+  background-color: #eeeeee;
+  border-color: #dddddd;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  color: #ffffff;
+  background-color: #d14444;
+  border-color: #d14444;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #777777;
+  background-color: #ffffff;
+  border-color: #dddddd;
+}
+
+.btn {
+  border-radius: 0;
+}
+.btn.btn-danger {
+  background: #d14444;
+}
+
+.jumbotron {
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90%;
+  opacity: 0.8;
+  color: #fff;
+  border-radius: 0;
+}
+    </style>
 
 </head>
 <body>
     <div id="app">
-        @include('inc.adminbar')
-
         @include('inc.navbar')
-        <div class="container-fluid">
+        <div class="container-fluid container-margin">
           @include('inc.messages')
           @yield('content')
         </div>

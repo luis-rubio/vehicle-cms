@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <div class="panel panel-primary">
-      <div class="panel-heading">Add Vehicle</div>
+<div class="container animated fadeIn">
+  <h2>Add Vehicle</h2>
+    <div class="panel panel-default">
       <div class="panel-body">
             {!! Form::open(['action' => 'VehiclesController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
               <div class="row">
@@ -132,7 +131,7 @@
               </div>
 
               <div class="col-md-12 text-center">
-                {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
+                {{Form::submit('Add Vehicle', ['class'=>'btn btn-primary'])}}
               </div>
 
             {!! Form::close() !!}
@@ -140,7 +139,4 @@
       </div>
     </div>
   </div>
-</div>
-      <br>
-      <hr>
 @endsection

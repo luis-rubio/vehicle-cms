@@ -1,11 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+<div class="container animated fadeIn">
+          <div>
+            <h1>Admin Panel</h1>
+          </div>
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+                <div class="panel-heading">
+                  Dashboard
+
+                </div>
 
                 <div class="panel-body">
                     @if (session('status'))
@@ -17,14 +21,21 @@
                     @if(count($vehicles) > 0)
                     <table class="table">
                       <tr>
-                        <th>Vehicle</th>
+                        <th>Vehicles</th>
                         <th></th>
-                        <th></th>
+                        <th>            <span class="pull-right">
+                                      <a href="/vehicles/create" class="btn btn-success">Add new</a>
+                                      <a href="#" class="btn btn-default">Log out</a>
+                                    </span></th>
                       </tr>
                       @foreach($vehicles as $vehicle)
                         <tr>
                           <td>{{$vehicle->year}} {{$vehicle->make}} {{$vehicle->model}}</td>
-                          <td><a class="btn btn-default btn-sm" href="/vehicles/{{$vehicle->id}}/edit">Edit Vehicle</a></td>
+                          <td>
+                            <span class="pull-right">
+                              <a class="btn btn-default btn-sm" href="/vehicles/{{$vehicle->id}}/edit">Edit Vehicle</a>
+                            </span>
+                          </td>
                         </tr>
                       @endforeach
                     </table>
@@ -33,7 +44,5 @@
                     @endif
                 </div>
             </div>
-        </div>
-    </div>
 </div>
 @endsection

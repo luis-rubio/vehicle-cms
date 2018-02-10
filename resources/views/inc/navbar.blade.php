@@ -47,12 +47,16 @@
           </a>
         </li>
 
-        <!-- contact -->
+        @guest
+        @else
+        <!-- admin -->
         <li><a href="/home">
             <span class="hidden-xs"><i class="fa fa-cogs"></i><br></span>
             <span class="sidenav-name">Admin</span>
           </a>
         </li>
+        @endguest
+
       </ul>
     </div>
   </div>

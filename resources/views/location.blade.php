@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-location!
+<div id="map">
+
+</div>
 @endsection

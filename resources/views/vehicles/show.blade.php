@@ -1,18 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
-
-  <div class="panel panel-default">
-    <div class="panel-heading">
+<div class="container-fluid container-padding">
+  <div class="panel panel-default animated fadeInUp">
+    <!-- <div class="panel-heading">
       <a href="/vehicles" class="btn btn-sm btn-default">Go Back</a>
-    </div>
+    </div> -->
     <div class="panel-body">
 
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-8">
       @if(count($photos) > 0)
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
+            <div class="item active">
+              <img src="http://2090auto.com/storage/vehicle_images/dpcNExsv01j0febcCNIqVW24rNpoFyuHorEBA86J.jpeg">
+            </div>
             @foreach($photos as $photo)
               @if ($loop->first)
                 <div class="item active">
@@ -38,7 +41,7 @@
         <p>No images found</p>
       @endif
     </div>
-    <div class="col-md-5">
+    <div class="col-md-4">
       <h1>{{$vehicle->year}} {{$vehicle->make}} {{$vehicle->model}}</h1>
       <div>
         <table class="table">
@@ -115,5 +118,6 @@
       </div>
 
     </div>
+</div>
   @endif
 @endsection

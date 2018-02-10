@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-  <h1>Our Vehicles</h1>
 
+<div class="container-fluid container-padding">
+  <div class="animated fadeIn">
+  <h1>Our Vehicles</h1>
+</div>
 
 
 
@@ -11,7 +14,7 @@
 
     @foreach($vehicles as $vehicle)
     <div class="col-md-4">
-      <div class="panel panel-default">
+      <div class="panel panel-default animated fadeInUp">
 
         @if(count($photos) > 0)
           @foreach($photos as $photo)
@@ -45,4 +48,6 @@
   @else
     <p>No posts found</p>
   @endif
+
+</div>
 @endsection

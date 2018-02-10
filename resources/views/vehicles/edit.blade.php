@@ -1,13 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row">
-  <div class="col-md-8 col-md-offset-2">
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <a href="/vehicles/{{$vehicle->id}}/" class="btn btn-sm btn-default">Go Back</a>
-        Edit Vehicle
-      </div>
+<div class="container animated fadeIn">
+  <h2>Edit {{$vehicle->year}} {{$vehicle->make}} {{$vehicle->model}}</h2>
+    <div class="panel panel-default">
       <div class="panel-body">
             {!! Form::open(['action' => ['VehiclesController@update', $vehicle->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
               <div class="row">
@@ -143,10 +139,11 @@
                 {{Form::submit('Submit', ['class'=>'btn btn-primary'])}}
               </div>
 
+              <a href="/vehicles/{{$vehicle->id}}/" class="btn btn-sm btn-default">Go Back</a>
+
             {!! Form::close() !!}
 
       </div>
     </div>
-  </div>
 </div>
 @endsection
